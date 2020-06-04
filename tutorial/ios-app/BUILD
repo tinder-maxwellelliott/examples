@@ -7,8 +7,15 @@ objc_library(
         "UrlGet/AppDelegate.m",
         "UrlGet/UrlGetViewController.m",
         "UrlGet/main.m",
-    ],
+    ] + [":GeneratedFile"],
     hdrs = glob(["UrlGet/*.h"]),
+)
+
+genrule(
+    name = "GeneratedFile",
+    srcs = [],
+    outs = ["GeneratedFile.m"],
+    cmd = "echo 'int something(){}' > $@"
 )
 
 ios_application(
