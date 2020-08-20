@@ -1,10 +1,32 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
-http_archive(
+git_repository(
     name = "build_bazel_rules_apple",
-    sha256 = "bdc8e66e70b8a75da23b79f1f8c6207356df07d041d96d2189add7ee0780cf4e",
-    strip_prefix = "rules_apple-b869b0d3868d78a1d4ffd866ccb304fb68aa12c3",
-    url = "https://github.com/bazelbuild/rules_apple/archive/b869b0d3868d78a1d4ffd866ccb304fb68aa12c3.tar.gz",
+    remote = "https://github.com/bazelbuild/rules_apple.git",
+    commit = "8897bacf3dc4b3f2dc2517666f94843977145f8d",
+    shallow_since = "1597188721 -0700"
+)
+
+git_repository(
+    name = "build_bazel_rules_swift",
+    remote = "https://github.com/bazelbuild/rules_swift.git",
+    commit = "b1610a1b21480851ca37d245795dbfb3b3c7c2fd",
+    shallow_since = "1595520034 -0700"
+)
+
+git_repository(
+    name = "build_bazel_apple_support",
+    remote = "https://github.com/bazelbuild/apple_support.git",
+    commit = "647480b45440131b34d9cc8ffbbba39b72acccb2",
+    shallow_since = "1594938189 -0700"
+)
+
+git_repository(
+    name = "rules_apple_line",
+    remote = "https://github.com/line/rules_apple_line.git",
+    commit = "69d0d00c0447d56f9af5d87d860cea931ab275bb",
+    shallow_since = "1596088389 +0900"
 )
 
 load(
@@ -28,28 +50,50 @@ load(
 
 apple_support_dependencies()
 
-http_archive(
-    name = "io_bazel_rules_appengine",
-    strip_prefix = "rules_appengine-339f6aba67fcedb7268cf54d1163cf7704a277ca",
-    # TODO: update to a release version that contains 339f6aba67fcedb7268cf54d1163cf7704a277ca.
-    # This commit fixes the Maven artifact URLs to use "https" instead of "http".
-    # We don't specify sha256, because the sha256 of GitHub-served non-release archives isn't
-    # stable.
-    urls = ["https://github.com/bazelbuild/rules_appengine/archive/339f6aba67fcedb7268cf54d1163cf7704a277ca.tar.gz"],
+load(
+    "@rules_apple_line//apple:repositories.bzl",
+    "rules_apple_line_dependencies",
 )
+
+rules_apple_line_dependencies()
 
 load(
-    "@io_bazel_rules_appengine//appengine:java_appengine.bzl",
-    "java_appengine_repositories",
+    "@com_google_protobuf//:protobuf_deps.bzl",
+    "protobuf_deps"
 )
 
-java_appengine_repositories()
+protobuf_deps()
 
-android_sdk_repository(name = "androidsdk")
+# http_archive(
+#     name = "io_bazel_rules_appengine",
+#     strip_prefix = "rules_appengine-339f6aba67fcedb7268cf54d1163cf7704a277ca",
+#     # TODO: update to a release version that contains 339f6aba67fcedb7268cf54d1163cf7704a277ca.
+#     # This commit fixes the Maven artifact URLs to use "https" instead of "http".
+#     # We don't specify sha256, because the sha256 of GitHub-served non-release archives isn't
+#     # stable.
+#     urls = ["https://github.com/bazelbuild/rules_appengine/archive/339f6aba67fcedb7268cf54d1163cf7704a277ca.tar.gz"],
+# )
+
+# load(
+#     "@io_bazel_rules_appengine//appengine:java_appengine.bzl",
+#     "java_appengine_repositories",
+# )
+
+# java_appengine_repositories()
+
+# android_sdk_repository(name = "androidsdk")
+
+# http_archive(
+#     name = "rules_android",
+#     sha256 = "cd06d15dd8bb59926e4d65f9003bfc20f9da4b2519985c27e190cddc8b7a7806",
+#     strip_prefix = "rules_android-0.1.1",
+#     urls = ["https://github.com/bazelbuild/rules_android/archive/v0.1.1.zip"],
+# )
 
 http_archive(
-    name = "rules_android",
-    sha256 = "cd06d15dd8bb59926e4d65f9003bfc20f9da4b2519985c27e190cddc8b7a7806",
-    strip_prefix = "rules_android-0.1.1",
-    urls = ["https://github.com/bazelbuild/rules_android/archive/v0.1.1.zip"],
+    name = "CocoaLumberjack",
+    build_file = "//ios-app/Vendor/CocoaLumberjack:BUILD",
+    urls = ["https://github.com/CocoaLumberjack/CocoaLumberjack/archive/3.6.2.tar.gz"],
+    sha256 = "36331c3b812192216f0dddd7759a4cff9c8ca02aadf29892de4455cf96c6454a",
+    strip_prefix = "CocoaLumberjack-3.6.2/Sources"
 )

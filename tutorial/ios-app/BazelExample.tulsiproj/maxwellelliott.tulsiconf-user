@@ -1,0 +1,10 @@
+{
+  "optionSet" : {
+    "BazelPath" : {
+      "p" : "/Users/maxwellelliott/go/bin/bazelisk"
+    },
+    "WorkspaceRootPath" : {
+      "p" : "/Users/maxwellelliott/Development/examples/tutorial"
+    }
+  }
+}

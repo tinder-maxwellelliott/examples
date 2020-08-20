@@ -1,0 +1,13 @@
+{
+  "configDefaults" : {
+    "optionSet" : {
+
+    }
+  },
+  "packages" : [
+    "ios-app",
+    "ios-app/Vendor/CocoaLumberjack"
+  ],
+  "projectName" : "BazelExample",
+  "workspaceRoot" : "../.."
+}

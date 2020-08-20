@@ -1,0 +1,29 @@
+
+<Scheme version="1.3" LastUpgradeVersion="1000">
+    <BuildAction buildImplicitDependencies="YES" parallelizeBuildables="YES">
+        <BuildActionEntries>
+            <BuildActionEntry buildForRunning="YES" buildForTesting="YES" buildForAnalyzing="YES" buildForProfiling="YES" buildForArchiving="YES">
+                <BuildableReference ReferencedContainer="container:BazelExample.xcodeproj" BlueprintIdentifier="AB1E347B635934BC00000000" BuildableIdentifier="primary" BuildableName="libios-app-UrlGetClasses.a" BlueprintName="ios-app-UrlGetClasses"></BuildableReference>
+            </BuildActionEntry>
+        </BuildActionEntries>
+    </BuildAction>
+    <TestAction shouldUseLaunchSchemeArgsEnv="YES" buildConfiguration="__TulsiTestRunner_Debug" selectedLauncherIdentifier="Xcode.DebuggerFoundation.Launcher.LLDB" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB">
+        <Testables></Testables>
+        <BuildableProductRunnable runnableDebuggingMode="0">
+            <BuildableReference BuildableIdentifier="primary" BlueprintName="ios-app-UrlGetClasses" ReferencedContainer="container:BazelExample.xcodeproj" BlueprintIdentifier="AB1E347B635934BC00000000" BuildableName="libios-app-UrlGetClasses.a"></BuildableReference>
+        </BuildableProductRunnable>
+    </TestAction>
+    <LaunchAction useCustomWorkingDirectory="NO" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" debugDocumentVersioning="YES" allowLocationSimulation="YES" debugServiceExtension="internal" launchStyle="0" buildConfiguration="Debug" selectedLauncherIdentifier="Xcode.DebuggerFoundation.Launcher.LLDB" ignoresPersistentStateOnLaunch="NO">
+        <EnvironmentVariables></EnvironmentVariables>
+        <MacroExpansion>
+            <BuildableReference BuildableIdentifier="primary" BuildableName="libios-app-UrlGetClasses.a" ReferencedContainer="container:BazelExample.xcodeproj" BlueprintName="ios-app-UrlGetClasses" BlueprintIdentifier="AB1E347B635934BC00000000"></BuildableReference>
+        </MacroExpansion>
+    </LaunchAction>
+    <ProfileAction debugDocumentVersioning="YES" buildConfiguration="__TulsiTestRunner_Release" shouldUseLaunchSchemeArgsEnv="YES" useCustomWorkingDirectory="NO">
+        <MacroExpansion>
+            <BuildableReference BlueprintName="ios-app-UrlGetClasses" BuildableIdentifier="primary" BlueprintIdentifier="AB1E347B635934BC00000000" ReferencedContainer="container:BazelExample.xcodeproj" BuildableName="libios-app-UrlGetClasses.a"></BuildableReference>
+        </MacroExpansion>
+    </ProfileAction>
+    <AnalyzeAction buildConfiguration="Debug"></AnalyzeAction>
+    <ArchiveAction revealArchiveInOrganizer="YES" buildConfiguration="Release"></ArchiveAction>
+</Scheme>

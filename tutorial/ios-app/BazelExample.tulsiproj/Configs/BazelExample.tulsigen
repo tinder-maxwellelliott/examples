@@ -1,0 +1,59 @@
+{
+  "additionalFilePaths" : [
+    "ios-app/BUILD"
+  ],
+  "buildTargets" : [
+    "//ios-app/Vendor/CocoaLumberjack:CocoaLumberjack",
+    "//ios-app/Vendor/CocoaLumberjack:CocoaLumberjack_swift",
+    "//ios-app:UrlGetClasses",
+    "//ios-app:ios-app"
+  ],
+  "optionSet" : {
+    "BazelBuildOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "CommandlineArguments" : {
+      "p" : "$(inherited)"
+    },
+    "EnvironmentVariables" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "ProjectGenerationBazelStartupOptions" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPreActionScript" : {
+      "p" : "$(inherited)"
+    }
+  },
+  "projectName" : "BazelExample",
+  "sourceFilters" : [
+    "ios-app/...",
+    "ios-app/UrlGet",
+    "ios-app/Vendor",
+    "ios-app/Vendor/CocoaLumberjack"
+  ]
+}

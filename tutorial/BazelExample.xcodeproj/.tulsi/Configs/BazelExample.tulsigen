@@ -1,0 +1,16 @@
+{
+  "additionalFilePaths" : [
+    "ios-app/BUILD"
+  ],
+  "buildTargets" : [
+    "//ios-app:UrlGetClasses",
+    "//ios-app:ios-app"
+  ],
+  "optionSet" : {
+
+  },
+  "projectName" : "BazelExample",
+  "sourceFilters" : [
+
+  ]
+}
